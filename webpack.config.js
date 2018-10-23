@@ -5,7 +5,8 @@ module.exports = {
   devServer: {
     inline: true,
     contentBase: './src',
-    port: 7777
+    port: 7777,
+    historyApiFallback: true
   },
   mode: 'development',
   entry: './dev/js/main.js',
@@ -32,7 +33,8 @@ module.exports = {
   },
   output: {
     path: 'src',
-    filename: 'js/bundle.min.js'
+    filename: 'js/bundle.min.js',
+    publicPath: '/'
   },
   plugins: [new webpack.optimize.OccurrenceOrderPlugin()]
 };
